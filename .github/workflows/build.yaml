@@ -28,13 +28,12 @@ jobs:
 
     - name: Install Android NDK
       run: |
-        sdkmanager --install "ndk;25.1.8937393" # Sesuaikan versi NDK jika diperlukan
+        sdkmanager --install "ndk;25.1.8937393"
 
-    # 4. Setup Flutter
+    # 4. Setup Flutter (Dihapus kuncian versinya agar otomatis mengambil yang terbaru)
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.24.0' # Sesuaikan dengan versi Flutter Anda
         channel: 'stable'
 
     # 5. Ambil Dependencies Flutter
@@ -50,4 +49,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: rti-clone-release-apk
-        path: build/app/outputs/flutter-apk/app-release-apk
+        path: build/app/outputs/flutter-apk/app-release.apk
