@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.10.2)
-
-project(finance_engine VERSION 1.0.0 LANGUAGES CXX)
-
-add_library(finance_engine SHARED src/finance_engine.cpp)
