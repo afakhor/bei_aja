@@ -12,7 +12,8 @@ jobs:
 
     steps:
     # 1. Checkout kode dari GitHub
-    - os: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
     # 2. Setup Java Development Kit (JDK)
     - name: Set up JDK 17
